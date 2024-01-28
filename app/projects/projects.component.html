@@ -1,0 +1,24 @@
+
+
+  <div class="assign-section">
+    <h3 >Assign Project to Consultant</h3>
+
+    <select class="select-styles"  [(ngModel)]="selectedConsultantId"    >
+      <option disabled selected value="">Select Consultant</option>
+      <option    *ngFor="let user of consultants" [value]="user.id"   >{{ user.username }}</option>
+    </select>
+
+    <select class="select-styles"  [(ngModel)]="selectedProjectId" >
+      <option disabled selected value="">Select Project</option>
+      <option *ngFor="let project of projects" [value]="project.id"  >{{ project.titre }}</option>
+    </select>
+
+
+
+
+
+    <button class="button-styles" (click)="assignProject()">Assign Project</button>
+  </div>
+
+
+
